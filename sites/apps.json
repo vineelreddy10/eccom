@@ -1,0 +1,41 @@
+{
+    "frappe": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 1,
+        "version": "16.0.0-dev"
+    },
+    "gfm": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "eb02273f49dba9cdbd3a5ad0222d560726a290c8",
+            "branch": "main"
+        },
+        "required": [],
+        "idx": 2,
+        "version": "0.0.1"
+    },
+    "asakta_ecom": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "f7e53f6fff68617f963c788c590bed640939ce8d",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 3,
+        "version": "0.0.1"
+    },
+    "doppio": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "74553e578ba6467512008d67bece82de34324471",
+            "branch": "master"
+        },
+        "required": [],
+        "idx": 4,
+        "version": "0.0.1"
+    }
+}

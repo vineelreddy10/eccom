@@ -1,0 +1,73 @@
+2024-10-08 19:17:43,635 INFO ipython === bench console session ===
+2024-10-08 19:17:43,636 INFO ipython === session end ===
+2024-10-09 16:36:53,600 INFO ipython === bench console session ===
+2024-10-09 16:36:53,635 INFO ipython import frappe
+
+def create_doctype(doctype_name, fields):
+    try:
+        frappe.get_doc("DocType", test_1)
+        print("Doctype already exists:", test_1)
+    except frappe.DoesNotExistError:
+        doctype = frappe.new_doc("DocType")
+        doctype.update({
+            "doctype_name": test_1,
+            "fields": fields,
+            "module": "Custom"
+        })
+        doctype.insert()
+        print("Doctype created:", doctype_name)
+
+Like 
+create_doctype("My Doctype", [
+    {"fieldname": "field_1", "fieldtype": "Data", "label": "Field 1"},
+    {"fieldname": "field_2", "fieldtype": "Int", "label": "Field 2"},
+    {"fieldname": "field_3", "fieldtype": "Date", "label": "Field 3"},
+])
+2024-10-09 16:36:53,637 INFO ipython (venv) vineel@Vineel:~/development/frappeapp/frappegfm$ bench --site gfm.com console
+Apps in this namespace:
+frappe, gfm
+
+   ...:         doctype.update({
+   ...:             "doctype_name": test_1,
+   ...:             "fields": fields,
+   ...:             "module": "Custom"
+   ...:         })
+   ...:         doctype.insert()
+   ...:         print("Doctype created:", doctype_name)
+   ...: 
+   ...: Like
+   ...: create_doctype("My Doctype", [
+   ...:     {"fieldname": "field_1", "fieldtype": "Data", "label": "Field 1"},
+   ...:     {"fieldname": "field_2", "fieldtype": "Int", "label": "Field 2"},
+   ...:     {"fieldname": "field_3", "fieldtype": "Date", "label": "Field 3"},
+   ...: ])
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[1], line 17
+     14         doctype.insert()
+     15         print("Doctype created:", doctype_name)
+---> 17 Like 
+     18 create_doctype("My Doctype", [
+     19     {"fieldname": "field_1", "fieldtype": "Data", "label": "Field 1"},
+     20     {"fieldname": "field_2", "fieldtype": "Int", "label": "Field 2"},
+     21     {"fieldname": "field_3", "fieldtype": "Date", "label": "Field 3"},
+     22 ])
+
+NameError: name 'Like' is not defined
+
+In [2]: def create_doctype(doctype_name, fields):
+    doctype = frappe.get_doc({
+        "doctype": "DocType",
+        "name": doctype_name,
+        "fields": fields,
+        "module": "Custom"
+    })
+    doctype.insert()
+    print("Doctype created:", doctype_name)
+
+create_doctype("My Doctype", [
+    {"fieldname": "field_1", "fieldtype": "Data", "label": "Field 1"},
+    {"fieldname": "field_2", "fieldtype": "Int", "label": "Field 2"},
+    {"fieldname": "field_3", "fieldtype": "Date", "label": "Field 3"},
+])
+2024-10-09 16:36:53,638 INFO ipython === session end ===

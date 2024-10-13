@@ -1,0 +1,8 @@
+2024-10-13 17:01:59,538 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for ecom.localhost
+2024-10-13 17:01:59,572 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for ecom.localhost
+2024-10-13 17:01:59,582 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for ecom.localhost
+2024-10-13 17:01:59,596 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for ecom.localhost
+2024-10-13 17:01:59,614 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for ecom.localhost
+2024-10-13 17:01:59,622 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for ecom.localhost
+2024-10-13 17:02:00,812 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for ecom.localhost
+2024-10-13 17:02:00,834 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for ecom.localhost
